@@ -1,7 +1,7 @@
 # Domestika: Creative Coding: Making Visuals with JavaScript Course
 Examples and Assignments from Domestika's Creative Coding: Making Visuals with JavaScript Course
 
-My project's code: [to be updated once completed
+My project's code: [to be updated once completed]
 
 ### To run:
 1) Install canvas sketch
