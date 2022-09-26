@@ -9,10 +9,10 @@ const settings = {
 };
 
 
-let text = 'Ї';
+let text = 'D';
 let fontSize = 800;
 let fontFamily = 'serif';
-let grid_step = 15;
+let grid_step = 25;
 
 let gotBackgroundArray = false;
 let circleRadius = 1;
@@ -37,7 +37,7 @@ class Agent {
     ctx.translate(this.cx,this.cy);
     ctx.lineWidth = this.lineWidth;
     ctx.beginPath();
-    ctx.strokeStyle = 'yellow';
+    ctx.strokeStyle = 'white';// 'yellow';
     ctx.arc(0,0,this.radius, 0, 2*Math.PI);
     ctx.stroke();
     ctx.restore();
@@ -176,7 +176,7 @@ const sketch = async (context, width, height, frame) => {
 
 
   return async ({ context, width, height, frame }) => {
-    context.fillStyle = 'blue';
+    context.fillStyle = 'black'; // 'blue';
     context.fillRect(0, 0, width, height);
 
     if (!gotBackgroundArray) {
@@ -198,23 +198,4 @@ const sketch = async (context, width, height, frame) => {
 
 
 canvasSketch(sketch, settings);
-
-// const start = async () => {
-//     manager = await canvasSketch(sketch, settings);
-//   };
-// start();
-// const start = async () => {
-//     const manager = await canvasSketch(sketch, settings);
-//     window.addEventListener('click', () => {
-//       if (manager.props.playing) manager.pause();
-//       else manager.play();
-//     });
-//   };
-// start();
-
-// const animate = async () => {
-// //   console.log('domestika');
-//   await requestAnimationFrame(animate);
-// };
-// animate();
 
