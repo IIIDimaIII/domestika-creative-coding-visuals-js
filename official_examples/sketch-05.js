@@ -32,8 +32,6 @@ const sketch = ({ context, width, height }) => {
     typeContext.font = `${fontSize}px ${fontFamily}`;
     typeContext.textBaseline = 'top';
     
-    
-
     const metrics = typeContext.measureText(text);
     const mx = metrics.actualBoundingBoxLeft * -1;
     const my = metrics.actualBoundingBoxAscent * -1;
@@ -41,8 +39,8 @@ const sketch = ({ context, width, height }) => {
     const mh = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent;
 
 
-    const tx = (cols - mw) * 0.5 - mx;
-    const ty = (rows - mh) * 0.5 - my;
+    const tx = (width - mw) * 0.5 - mx;
+    const ty = (height - mh) * 0.5 - my;
     
     typeContext.save();
     typeContext.translate(tx, ty);
@@ -55,7 +53,9 @@ const sketch = ({ context, width, height }) => {
 
     const typeData = typeContext.getImageData(0, 0, cols, rows).data;
     // console.log(typeData);
-    // context.drawImage(typeCanvas, 0, 0);
+    context.drawImage(typeCanvas, 0, 0);
+
+
     context.fillStyle = 'black';
     context.fillRect(0,0,width,height);
 
