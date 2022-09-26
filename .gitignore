@@ -1,4 +1,5 @@
-**/node_modules/**
-**/output/**
+myproject/
+node_modules/
+output/
 package.json
 package-lock.json
