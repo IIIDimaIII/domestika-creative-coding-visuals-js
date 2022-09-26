@@ -9,10 +9,10 @@ const settings = {
 };
 
 
-let text = 'Ї';
+let text = 'D';
 let fontSize = 800;
 let fontFamily = 'serif';
-let grid_step = 15;
+let grid_step = 25;
 
 let gotBackgroundArray = false;
 let circleRadius = 1;
